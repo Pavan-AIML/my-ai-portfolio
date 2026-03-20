@@ -10,18 +10,16 @@ export const voiceAgentContent = {
 
   /** Short bio (1–3 sentences). Agent uses this to answer "tell me about yourself" */
   shortBio:
-    "I'm an AI Engineer with a Master's in Data Science and Applied Mathematics from TUM. " +
-    "I build AI agents from planning to production. I have worked in some of the best German companies and startups. "
-
-
-    ,
+    "I am an AI Engineer focused on taking AI systems from prototype to production, with hands-on experience in LLM agents, MLOps, and cloud data pipelines. " +
+    "I have built and deployed solutions across insurance, mobility, and industrial domains using Python, PyTorch, LangChain/LangGraph, Docker, Kubernetes, and Azure.",
   /** Skills the agent can mention */
   skills: [
-    "Deep Learning & Neural Processes",
-    "Python, PyTorch, MLOps",
-    "Spatio-temporal modeling",
-    "Air quality & satellite data (AOD, PM2.5)",
-    "Building AI agents end-to-end",
+    "Production AI and MLOps (Docker, Kubernetes, CI/CD, GitLab, GitHub Actions)",
+    "LLM application development (LangChain, LangGraph, agentic workflows)",
+    "Python, PyTorch, TensorFlow, and scikit-learn",
+    "Cloud and data engineering (Azure, SQL, Databricks, ETL pipelines)",
+    "Deep learning for computer vision and spatio-temporal modeling",
+    "Analytics and reporting (Power BI, Excel, automation)",
   ],
 
   /** Projects the agent can describe (keep in sync with your Projects section) */
@@ -29,22 +27,56 @@ export const voiceAgentContent = {
     {
       name: "Master Thesis",
       oneLiner:
-        "Joint spatial estimation of AOD and PM2.5 from satellite and ground data in Delhi using a probabilistic neural process approach.",
+        "Built a deep-learning framework using attentive neural processes for spatio-temporal forecasting of AOD and PM2.5 from satellite and ground observations in Delhi.",
       tags: ["Deep Learning", "Python", "MLOps", "Gaussian Process"],
     },
-    // Add more projects as you add them to the portfolio page
+    {
+      name: "Agentic RAG System",
+      oneLiner:
+        "Developed a multi-agent hybrid RAG pipeline with LLMs and ChromaDB to automate high-accuracy retrieval and question answering from enterprise documents.",
+      tags: ["LLMs", "RAG", "LangChain", "LangGraph", "ChromaDB", "Python"],
+    },
+    {
+      name: "Railway Workflow Automation",
+      oneLiner:
+        "Built a multi-agent workflow for technical document operations and integrated CI/CD with Docker and GitLab for reliable deployment.",
+      tags: ["AI Agents", "MLOps", "Docker", "GitLab CI/CD"],
+    },
   ],
 
   /** Optional: experience / roles the agent can mention */
   experience: [
-    { role: "Data / ML work", org: "MGA data analysis", duration: "SQL, SSMS, BI dashboards, Python automation" },
-    // Add: { role: "AI Engineer", org: "Company", duration: "2024–now" },
+    {
+      role: "AI Engineer, Process Automation",
+      org: "Munich RE",
+      duration: "2025-present",
+    },
+    {
+      role: "AI Engineer, ML Ops",
+      org: "MERMEC",
+      duration: "2025",
+    },
+    {
+      role: "Data Engineer",
+      org: "BMW",
+      duration: "2024",
+    },
+    {
+      role: "Data Scientist",
+      org: "ZEISS and Max Planck",
+      duration: "2023-2024",
+    },
+    {
+      role: "Data Analyst",
+      org: "Infineon and HomeLane",
+      duration: "2019-2023",
+    },
   ],
 
   /** How the agent should behave (tone, rules) */
   instructionsTone:
     "Be friendly, conversational, and concise. Only state facts from the content above; do not invent details. " +
-    "If asked something you don't know, say you're not sure or ask the visitor to check the portfolio or contact directly. " +
+    "If asked something you don't know, say you're not sure or ask the visitor to check the portfolio or contact directly in the given contact details at the end of the portfolio. " +
     "When the user connects, welcome them warmly and ask how you can help.",
 };
 

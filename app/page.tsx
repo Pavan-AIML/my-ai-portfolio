@@ -218,7 +218,7 @@ export default function Home() {
     </div>
 
         <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">2022 – 2024</p>
+          <p className="text-xs text-white/60">June,2025 – Sep,2025</p>
           <p className="mt-1 text-sm font-semibold">AI Engineer, Mermec, Work-Study</p>
           <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
           <li>
@@ -232,7 +232,7 @@ export default function Home() {
 
         </div>
         <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">2022 – 2024</p>
+          <p className="text-xs text-white/60">June 2024, – August 2024</p>
           <p className="mt-1 text-sm font-semibold">Data Engineer, BMW, Work-Study</p>
           <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
           <li>
@@ -248,7 +248,7 @@ export default function Home() {
 
         </div>
         <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">2022 – 2024</p>
+          <p className="text-xs text-white/60">October, 2023 – April, 2024</p>
           <p className="mt-1 text-sm font-semibold">Data Scientist, ZEISS, Internship</p>
           <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
           <li>
@@ -264,7 +264,7 @@ export default function Home() {
 
         </div>
         <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">2022 – 2024</p>
+          <p className="text-xs text-white/60">June, 2023 – August, 2023</p>
           <p className="mt-1 text-sm font-semibold">Data Scientist, Max Planck, Work-Study</p>
           <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
           <li>
@@ -277,9 +277,24 @@ export default function Home() {
           </ul>
 
         </div>
+  
+        <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
+          <p className="text-xs text-white/60">August, 2022 – February, 2023</p>
+          <p className="mt-1 text-sm font-semibold">Data Analyst, Infenion Technologies, Work-Study</p>
+          <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
+          <li>
+          Analyzed internal training data using Python (Pandas) and Excel
+          </li>
+          <li>
+          Built interactive Power BI dashboards to enhance data monitoring and reporting
+          </li>
+
+          </ul>
+
+        </div>
         
         <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">2022 – 2024</p>
+          <p className="text-xs text-white/60">March, 2019 – September, 2020</p>
           <p className="mt-1 text-sm font-semibold">Data Analyst, HomeLane (Growing-Startup), Full-Time</p>
           <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
           <li>
@@ -293,7 +308,7 @@ export default function Home() {
 
         </div>
         <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">2022 – 2024</p>
+          <p className="text-xs text-white/60">October, 2017 – February, 2019</p>
           <p className="mt-1 text-sm font-semibold">Young Engineer, L&W Construction, Full-Time</p>
           <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
           <li>
