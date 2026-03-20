@@ -333,7 +333,7 @@ export default function Home() {
               className="h-32 w-full rounded-xl object-cover"
             />
             <ZoomableImage
-              src="/BMW_!.jpeg"
+              src="/BMW_%21.jpeg"
               alt="BMW image 2"
               width={900}
               height={600}

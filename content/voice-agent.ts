@@ -11,8 +11,10 @@ export const voiceAgentContent = {
   /** Short bio (1–3 sentences). Agent uses this to answer "tell me about yourself" */
   shortBio:
     "I'm an AI Engineer with a Master's in Data Science and Applied Mathematics from TUM. " +
-    "I build AI agents from planning to production, and I've worked on spatio-temporal models, neural processes for air quality estimation, and MLOps.",
+    "I build AI agents from planning to production. I have worked in some of the best German companies and startups. "
 
+
+    ,
   /** Skills the agent can mention */
   skills: [
     "Deep Learning & Neural Processes",
