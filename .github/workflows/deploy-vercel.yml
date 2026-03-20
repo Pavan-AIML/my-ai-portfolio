@@ -49,6 +49,26 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Validate required Vercel secrets
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "Missing GitHub secret: VERCEL_TOKEN"
+            exit 1
+          fi
+          if [ -z "$VERCEL_ORG_ID" ]; then
+            echo "Missing GitHub secret: VERCEL_ORG_ID"
+            exit 1
+          fi
+          if [ -z "$VERCEL_PROJECT_ID" ]; then
+            echo "Missing GitHub secret: VERCEL_PROJECT_ID"
+            exit 1
+          fi
+          echo "All required Vercel secrets are present."
+
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
