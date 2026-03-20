@@ -18,11 +18,6 @@ export function ZoomableImage({
   className?: string;
 }) {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Lock scroll while lightbox is open (avoids layout jump / flicker)
   useEffect(() => {
@@ -44,17 +39,13 @@ export function ZoomableImage({
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  const overlay =
-    open && mounted ? (
+  const overlay = open ? (
       <div
         role="dialog"
         aria-modal="true"
         aria-label={alt || "Image preview"}
         className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
         onClick={() => setOpen(false)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") setOpen(false);
-        }}
       >
         <div
           className="relative max-h-[90vh] w-full max-w-5xl overflow-hidden rounded-2xl border border-white/20 bg-zinc-950/90 shadow-2xl shadow-black/60"
@@ -90,7 +81,9 @@ export function ZoomableImage({
         <Image src={src} alt={alt} width={width} height={height} className={className} />
       </button>
 
-      {mounted && overlay ? createPortal(overlay, document.body) : null}
+      {open && typeof document !== "undefined" && overlay
+        ? createPortal(overlay, document.body)
+        : null}
     </>
   );
 }
