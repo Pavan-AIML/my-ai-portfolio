@@ -74,7 +74,7 @@ export default function Home() {
               Welcome to My Portofolio :) 
             </p>
             <h1 className="text-left text-lg font-semibold leading-snug tracking-tight md:text-3xl">
-              Hi, I am Pavan an AI/ML Engineer. I have studies Master's in Data Science and Applied Mathematics from TUM. Currently, I am building AI agents from planning to production.
+              Hi, I am Pavan an AI/ML Engineer. I have studies Master&apos;s in Data Science and Applied Mathematics from TUM. Currently, I am building AI agents from planning to production.
             </h1>
             <p className="text-base leading-7 text-zinc-100/90 text-justify">
               Please intract to my voice agent that can answer questions about my work behlf of me.

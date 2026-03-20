@@ -62,7 +62,7 @@ export function CertificatesSection({
       if (!res.ok) throw new Error(`List failed (${res.status})`);
       const data = (await res.json()) as { items: UploadedCertificate[] };
       setUploaded(data.items ?? []);
-    } catch (e) {
+    } catch {
       // Listing is best-effort; don't break the whole page.
       setUploaded([]);
     }

@@ -11,12 +11,13 @@ function safeFilename(name: string) {
 
 export async function POST(req: Request) {
   const formData = await req.formData();
-  const file = formData.get("file") as unknown as { name: string; size: number; arrayBuffer: () => Promise<ArrayBuffer> } | null;
+  const rawFile = formData.get("file");
   const slot = String(formData.get("slot") ?? "").trim().toLowerCase();
 
-  if (!file) {
+  if (!(rawFile instanceof File)) {
     return NextResponse.json({ error: "Missing file" }, { status: 400 });
   }
+  const file = rawFile;
   if (!slot) {
     return NextResponse.json({ error: "Missing slot" }, { status: 400 });
   }
@@ -24,14 +25,14 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid slot format" }, { status: 400 });
   }
 
-  const originalName = String((file as any).name ?? "certificate.pdf");
+  const originalName = String(file.name ?? "certificate.pdf");
   const ext = path.extname(originalName).toLowerCase();
   if (ext !== ".pdf") {
     return NextResponse.json({ error: "Only PDF files are allowed" }, { status: 400 });
   }
 
   const maxBytes = 10 * 1024 * 1024; // 10MB
-  if (Number((file as any).size) > maxBytes) {
+  if (Number(file.size) > maxBytes) {
     return NextResponse.json({ error: "File is too large (max 10MB)" }, { status: 400 });
   }
 
@@ -47,7 +48,7 @@ export async function POST(req: Request) {
 
   const filename = `${slot}__${Date.now()}-${safeFilename(originalName)}`;
   const filePath = path.join(certDir, filename);
-  const buffer = Buffer.from(await (file as any).arrayBuffer());
+  const buffer = Buffer.from(await file.arrayBuffer());
   await fs.writeFile(filePath, buffer);
 
   return NextResponse.json({
