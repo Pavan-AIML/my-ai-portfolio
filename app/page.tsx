@@ -63,7 +63,7 @@ export default function Home() {
         <VoiceAgent autoOpen autoWelcome />
 
         {/* <section className="grid gap-10 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/30 backdrop-blur md:grid-cols-2 md:items-center"> */}
-        <section className="relative grid gap-10 overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-r from-fuchsia-900/55 via-violet-900/55 to-sky-900/50 p-8 shadow-2xl shadow-black/50 backdrop-blur md:grid-cols-[1.6fr_1fr] md:items-center">
+        <section className="relative grid gap-10 overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-r from-fuchsia-900/55 via-violet-900/55 to-sky-900/50 p-8 shadow-2xl shadow-black/50 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/40 hover:shadow-2xl hover:shadow-fuchsia-500/15 md:grid-cols-[1.6fr_1fr] md:items-center">
         <div className="pointer-events-none absolute inset-0 opacity-40">
     <div className="absolute -top-20 -left-10 h-56 w-56 rounded-full bg-fuchsia-500 blur-3xl" />
     <div className="absolute -bottom-24 right-0 h-64 w-64 rounded-full bg-sky-400 blur-3xl" />
@@ -74,23 +74,23 @@ export default function Home() {
               Welcome to My Portofolio :) 
             </p>
             <h1 className="text-left text-lg font-semibold leading-snug tracking-tight md:text-3xl">
-              Hi, I am Pavan an AI/ML Engineer. I have studies Master&apos;s in Data Science and Applied Mathematics from TUM. Currently, I am building AI agents from planning to production.
+              Hi, I am Pavan an AI/ML Engineer. I have studied Master&apos;s in Data Science & Applied Mathematics from TUM. Currently, I am building AI agents from planning to production.
             </h1>
             <p className="text-base leading-7 text-zinc-100/90 text-justify">
-              Please intract to my voice agent that can answer questions about my work behlf of me.
+              Please intract to my voice agent that can answer questions about my work behalf of me.
               Explore the below projects. Each card links to my GitHub page.
-              Any question please reachout to me via my contact details below.
+              Any questions please reachout to me via my contact details given below.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-600 via-violet-600 to-sky-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/20 hover:opacity-95"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-600 via-violet-600 to-sky-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/20 transition duration-300 hover:-translate-y-0.5 hover:opacity-95 hover:shadow-lg hover:shadow-fuchsia-500/30"
               >
                 View projects
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-zinc-900/70 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800/80"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-zinc-900/70 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/35 hover:bg-zinc-800/80 hover:shadow-lg hover:shadow-violet-500/15"
               >
                 Contact
               </a>
@@ -99,7 +99,7 @@ export default function Home() {
 
           {/* RIGHT: just your image */}
           <div className="flex justify-center">
-            <div className="relative h-52 w-52 overflow-hidden rounded-3xl bg-white/10 shadow-xl shadow-black/40 md:h-60 md:w-60">
+            <div className="relative h-52 w-52 overflow-hidden rounded-3xl border border-white/10 bg-white/10 shadow-xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-fuchsia-300/40 hover:shadow-xl hover:shadow-fuchsia-500/25 md:h-60 md:w-60">
               <Image
                 src="/profile.jpg"
                 alt="Portrait of Pavan Kumar"
@@ -119,7 +119,7 @@ export default function Home() {
             {projects.map((p) => (
               <article
                 key={p.name}
-                className="group relative overflow-hidden rounded-3xl border border-white/15 bg-zinc-900/70 p-5 shadow-xl shadow-black/40 transition hover:bg-zinc-800/75"
+                className="group relative overflow-hidden rounded-3xl border border-white/15 bg-zinc-900/70 p-5 shadow-xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/50 hover:bg-zinc-800/75 hover:shadow-xl hover:shadow-fuchsia-500/20"
               >
                 <div className="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100">
                   <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-fuchsia-500/20 blur-3xl" />
@@ -169,7 +169,7 @@ export default function Home() {
                     href={p.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-full bg-white px-3 py-1.5 text-black hover:opacity-95"
+                    className="rounded-full bg-white px-3 py-1.5 text-black transition duration-300 hover:-translate-y-0.5 hover:opacity-95 hover:shadow-md hover:shadow-fuchsia-500/25"
                   >
                     GitHub
                   </a>
@@ -178,7 +178,7 @@ export default function Home() {
                       href={p.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-full border border-white/20 bg-zinc-900/70 px-3 py-1.5 text-white hover:bg-zinc-800/80"
+                      className="rounded-full border border-white/20 bg-zinc-900/70 px-3 py-1.5 text-white transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/40 hover:bg-zinc-800/80 hover:shadow-md hover:shadow-fuchsia-500/20"
                     >
                       Live demo
                     </a>
@@ -191,20 +191,30 @@ export default function Home() {
 
 
         {/* {Section for the work experience} */}
-        <section id="workexperience" className="relative mt-16 overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-r from-fuchsia-900/45 via-violet-900/45 to-sky-900/40 p-6 shadow-xl shadow-black/50 md:p-8">
+        <section id="workexperience" className="relative mt-16 overflow-hidden rounded-3xl border border-white/25 bg-gradient-to-r from-fuchsia-900/70 via-violet-900/65 to-sky-900/65 p-7 shadow-2xl shadow-black/60 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/40 hover:shadow-2xl hover:shadow-fuchsia-500/15 md:p-10">
         <div className="pointer-events-none absolute inset-0 opacity-40">
           <div className="absolute -top-16 -left-10 h-44 w-44 rounded-full bg-fuchsia-500/40 blur-3xl" />
           <div className="absolute -bottom-16 right-0 h-48 w-48 rounded-full bg-sky-400/30 blur-3xl" />
         </div>
         <div className="relative grid gap-8 md:grid-cols-[1.5fr_1fr] md:items-start">
           {/* LEFT: experience timeline */}
-          <div className="space-y-5">
-            <h2 className="text-lg font-semibold">Work Experiences:</h2>
-              <div className="space-y-4 text-sm text-white/75">
-                  <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-                  <p className="text-xs text-white/60"> September 2025 - February 2026</p>
-          <p className="mt-1 text-sm font-semibold">AI Engineer, Munich-RE</p>
-          <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
+          <div className="space-y-6">
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Work Experiences</h2>
+            <p className="-mt-2 max-w-2xl text-sm leading-6 text-zinc-200/90 md:text-base">
+              A timeline of impact across AI engineering, MLOps, data platforms, and business analytics.
+            </p>
+              <div className="relative space-y-6 border-l border-white/20 pl-6 text-base text-white/90">
+                  <div className="group relative rounded-2xl border border-white/20 bg-zinc-950/75 p-5 shadow-lg shadow-black/30 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/50 hover:bg-zinc-900/90 hover:shadow-fuchsia-500/20 md:p-6">
+                  <span className="absolute -left-[34px] top-7 h-3 w-3 rounded-full border border-white/50 bg-fuchsia-300 shadow shadow-fuchsia-400/60" />
+                  <p className="text-sm font-medium tracking-wide text-sky-200/90">September 2025 - February 2026</p>
+          <p className="mt-1 text-base font-semibold md:text-lg">AI Engineer, Munich-RE</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="rounded-full border border-sky-300/40 bg-sky-500/20 px-2.5 py-1 text-[11px] font-semibold text-sky-100">Python Automation</span>
+            <span className="rounded-full border border-violet-300/40 bg-violet-500/20 px-2.5 py-1 text-[11px] font-semibold text-violet-100">SQL/SSMS</span>
+            <span className="rounded-full border border-fuchsia-300/40 bg-fuchsia-500/20 px-2.5 py-1 text-[11px] font-semibold text-fuchsia-100">Power BI</span>
+            <span className="rounded-full border border-emerald-300/40 bg-emerald-500/20 px-2.5 py-1 text-[11px] font-semibold text-emerald-100">Process Automation</span>
+          </div>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-100/90 md:text-[15px]">
           <li>
             Built an end-to-end Python automation pipeline to handle FSRI data mapping, optimized workflows
             and eliminated repetitive manual tasks for MGAs using Python, Pandas, and SQL.
@@ -217,10 +227,18 @@ export default function Home() {
       
     </div>
 
-        <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">June,2025 – Sep,2025</p>
-          <p className="mt-1 text-sm font-semibold">AI Engineer, Mermec, Work-Study</p>
-          <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
+        <div className="group relative rounded-2xl border border-white/20 bg-zinc-950/75 p-5 shadow-lg shadow-black/30 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/50 hover:bg-zinc-900/90 hover:shadow-fuchsia-500/20 md:p-6">
+          <span className="absolute -left-[34px] top-7 h-3 w-3 rounded-full border border-white/50 bg-violet-300 shadow shadow-violet-400/60" />
+          <p className="text-sm font-medium tracking-wide text-sky-200/90">June 2025 - Sep 2025</p>
+          <p className="mt-1 text-base font-semibold md:text-lg">AI Engineer, Mermec, Work-Study</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="rounded-full border border-fuchsia-300/40 bg-fuchsia-500/20 px-2.5 py-1 text-[11px] font-semibold text-fuchsia-100">LLM Agents</span>
+            <span className="rounded-full border border-violet-300/40 bg-violet-500/20 px-2.5 py-1 text-[11px] font-semibold text-violet-100">LangGraph</span>
+            <span className="rounded-full border border-sky-300/40 bg-sky-500/20 px-2.5 py-1 text-[11px] font-semibold text-sky-100">Hybrid RAG</span>
+            <span className="rounded-full border border-emerald-300/40 bg-emerald-500/20 px-2.5 py-1 text-[11px] font-semibold text-emerald-100">CI/CD</span>
+            <span className="rounded-full border border-amber-300/40 bg-amber-500/20 px-2.5 py-1 text-[11px] font-semibold text-amber-100">Docker</span>
+          </div>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-100/90 md:text-[15px]">
           <li>
           Automated critical railway workflows by building a multi-agent system using
           LangGraph, incorporating hybrid RAG to streamline access to technical documents.
@@ -231,10 +249,18 @@ export default function Home() {
           </ul>
 
         </div>
-        <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">June 2024, – August 2024</p>
-          <p className="mt-1 text-sm font-semibold">Data Engineer, BMW, Work-Study</p>
-          <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
+        <div className="group relative rounded-2xl border border-white/20 bg-zinc-950/75 p-5 shadow-lg shadow-black/30 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/50 hover:bg-zinc-900/90 hover:shadow-fuchsia-500/20 md:p-6">
+          <span className="absolute -left-[34px] top-7 h-3 w-3 rounded-full border border-white/50 bg-sky-300 shadow shadow-sky-400/60" />
+          <p className="text-sm font-medium tracking-wide text-sky-200/90">June 2024 - August 2024</p>
+          <p className="mt-1 text-base font-semibold md:text-lg">Data Engineer, BMW, Work-Study</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="rounded-full border border-sky-300/40 bg-sky-500/20 px-2.5 py-1 text-[11px] font-semibold text-sky-100">Azure Data Lake</span>
+            <span className="rounded-full border border-violet-300/40 bg-violet-500/20 px-2.5 py-1 text-[11px] font-semibold text-violet-100">Databricks</span>
+            <span className="rounded-full border border-fuchsia-300/40 bg-fuchsia-500/20 px-2.5 py-1 text-[11px] font-semibold text-fuchsia-100">ETL Pipelines</span>
+            <span className="rounded-full border border-emerald-300/40 bg-emerald-500/20 px-2.5 py-1 text-[11px] font-semibold text-emerald-100">SQL</span>
+            <span className="rounded-full border border-amber-300/40 bg-amber-500/20 px-2.5 py-1 text-[11px] font-semibold text-amber-100">Power BI</span>
+          </div>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-100/90 md:text-[15px]">
           <li>
           Collected raw vehicle sensor data from Azure Data Lake
           </li>
@@ -247,10 +273,17 @@ export default function Home() {
           </ul>
 
         </div>
-        <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">October, 2023 – April, 2024</p>
-          <p className="mt-1 text-sm font-semibold">Data Scientist, ZEISS, Internship</p>
-          <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
+        <div className="group relative rounded-2xl border border-white/20 bg-zinc-950/75 p-5 shadow-lg shadow-black/30 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/50 hover:bg-zinc-900/90 hover:shadow-fuchsia-500/20 md:p-6">
+          <span className="absolute -left-[34px] top-7 h-3 w-3 rounded-full border border-white/50 bg-fuchsia-300 shadow shadow-fuchsia-400/60" />
+          <p className="text-sm font-medium tracking-wide text-sky-200/90">October 2023 - April 2024</p>
+          <p className="mt-1 text-base font-semibold md:text-lg">Data Scientist, ZEISS, Internship</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="rounded-full border border-fuchsia-300/40 bg-fuchsia-500/20 px-2.5 py-1 text-[11px] font-semibold text-fuchsia-100">Modeling</span>
+            <span className="rounded-full border border-violet-300/40 bg-violet-500/20 px-2.5 py-1 text-[11px] font-semibold text-violet-100">Optuna</span>
+            <span className="rounded-full border border-sky-300/40 bg-sky-500/20 px-2.5 py-1 text-[11px] font-semibold text-sky-100">Fine-tuning</span>
+            <span className="rounded-full border border-emerald-300/40 bg-emerald-500/20 px-2.5 py-1 text-[11px] font-semibold text-emerald-100">Production Deployment</span>
+          </div>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-100/90 md:text-[15px]">
           <li>
           Built a multi-degree polynomial regression model from scratch
           </li>
@@ -263,10 +296,16 @@ export default function Home() {
           </ul>
 
         </div>
-        <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">June, 2023 – August, 2023</p>
-          <p className="mt-1 text-sm font-semibold">Data Scientist, Max Planck, Work-Study</p>
-          <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
+        <div className="group relative rounded-2xl border border-white/20 bg-zinc-950/75 p-5 shadow-lg shadow-black/30 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/50 hover:bg-zinc-900/90 hover:shadow-fuchsia-500/20 md:p-6">
+          <span className="absolute -left-[34px] top-7 h-3 w-3 rounded-full border border-white/50 bg-violet-300 shadow shadow-violet-400/60" />
+          <p className="text-sm font-medium tracking-wide text-sky-200/90">June 2023 - August 2023</p>
+          <p className="mt-1 text-base font-semibold md:text-lg">Data Scientist, Max Planck, Work-Study</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="rounded-full border border-sky-300/40 bg-sky-500/20 px-2.5 py-1 text-[11px] font-semibold text-sky-100">Data Pipeline</span>
+            <span className="rounded-full border border-violet-300/40 bg-violet-500/20 px-2.5 py-1 text-[11px] font-semibold text-violet-100">CNN</span>
+            <span className="rounded-full border border-fuchsia-300/40 bg-fuchsia-500/20 px-2.5 py-1 text-[11px] font-semibold text-fuchsia-100">Computer Vision</span>
+          </div>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-100/90 md:text-[15px]">
           <li>
           Built a data-analysis pipeline for spectral image dataset
           </li>
@@ -278,10 +317,17 @@ export default function Home() {
 
         </div>
   
-        <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">August, 2022 – February, 2023</p>
-          <p className="mt-1 text-sm font-semibold">Data Analyst, Infenion Technologies, Work-Study</p>
-          <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
+        <div className="group relative rounded-2xl border border-white/20 bg-zinc-950/75 p-5 shadow-lg shadow-black/30 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/50 hover:bg-zinc-900/90 hover:shadow-fuchsia-500/20 md:p-6">
+          <span className="absolute -left-[34px] top-7 h-3 w-3 rounded-full border border-white/50 bg-sky-300 shadow shadow-sky-400/60" />
+          <p className="text-sm font-medium tracking-wide text-sky-200/90">August 2022 - February 2023</p>
+          <p className="mt-1 text-base font-semibold md:text-lg">Data Analyst, Infenion Technologies, Work-Study</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="rounded-full border border-emerald-300/40 bg-emerald-500/20 px-2.5 py-1 text-[11px] font-semibold text-emerald-100">Pandas</span>
+            <span className="rounded-full border border-sky-300/40 bg-sky-500/20 px-2.5 py-1 text-[11px] font-semibold text-sky-100">Excel</span>
+            <span className="rounded-full border border-violet-300/40 bg-violet-500/20 px-2.5 py-1 text-[11px] font-semibold text-violet-100">Power BI</span>
+            <span className="rounded-full border border-fuchsia-300/40 bg-fuchsia-500/20 px-2.5 py-1 text-[11px] font-semibold text-fuchsia-100">Reporting</span>
+          </div>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-100/90 md:text-[15px]">
           <li>
           Analyzed internal training data using Python (Pandas) and Excel
           </li>
@@ -293,10 +339,17 @@ export default function Home() {
 
         </div>
         
-        <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">March, 2019 – September, 2020</p>
-          <p className="mt-1 text-sm font-semibold">Data Analyst, HomeLane (Growing-Startup), Full-Time</p>
-          <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
+        <div className="group relative rounded-2xl border border-white/20 bg-zinc-950/75 p-5 shadow-lg shadow-black/30 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/50 hover:bg-zinc-900/90 hover:shadow-fuchsia-500/20 md:p-6">
+          <span className="absolute -left-[34px] top-7 h-3 w-3 rounded-full border border-white/50 bg-fuchsia-300 shadow shadow-fuchsia-400/60" />
+          <p className="text-sm font-medium tracking-wide text-sky-200/90">March 2019 - September 2020</p>
+          <p className="mt-1 text-base font-semibold md:text-lg">Data Analyst, HomeLane (Growing-Startup), Full-Time</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="rounded-full border border-sky-300/40 bg-sky-500/20 px-2.5 py-1 text-[11px] font-semibold text-sky-100">SQL</span>
+            <span className="rounded-full border border-violet-300/40 bg-violet-500/20 px-2.5 py-1 text-[11px] font-semibold text-violet-100">Python</span>
+            <span className="rounded-full border border-fuchsia-300/40 bg-fuchsia-500/20 px-2.5 py-1 text-[11px] font-semibold text-fuchsia-100">Market Analytics</span>
+            <span className="rounded-full border border-emerald-300/40 bg-emerald-500/20 px-2.5 py-1 text-[11px] font-semibold text-emerald-100">BI Dashboards</span>
+          </div>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-100/90 md:text-[15px]">
           <li>
           Market data and customer data analysis using SQL and Python
           </li>
@@ -307,10 +360,16 @@ export default function Home() {
           </ul>
 
         </div>
-        <div className="rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
-          <p className="text-xs text-white/60">October, 2017 – February, 2019</p>
-          <p className="mt-1 text-sm font-semibold">Young Engineer, L&W Construction, Full-Time</p>
-          <ul className="mt-1 space-y-1 text-xs text-zinc-100/85 list-disc pl-5">
+        <div className="group relative rounded-2xl border border-white/20 bg-zinc-950/75 p-5 shadow-lg shadow-black/30 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/50 hover:bg-zinc-900/90 hover:shadow-fuchsia-500/20 md:p-6">
+          <span className="absolute -left-[34px] top-7 h-3 w-3 rounded-full border border-white/50 bg-violet-300 shadow shadow-violet-400/60" />
+          <p className="text-sm font-medium tracking-wide text-sky-200/90">October 2017 - February 2019</p>
+          <p className="mt-1 text-base font-semibold md:text-lg">Young Engineer, L&W Construction, Full-Time</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="rounded-full border border-amber-300/40 bg-amber-500/20 px-2.5 py-1 text-[11px] font-semibold text-amber-100">Execution Planning</span>
+            <span className="rounded-full border border-sky-300/40 bg-sky-500/20 px-2.5 py-1 text-[11px] font-semibold text-sky-100">Project Coordination</span>
+            <span className="rounded-full border border-violet-300/40 bg-violet-500/20 px-2.5 py-1 text-[11px] font-semibold text-violet-100">Tracking Automation</span>
+          </div>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-100/90 md:text-[15px]">
           <li>
           Planned, coordinated and executed Capgemini phase 3 Hinjewadi project
           </li>
@@ -329,7 +388,7 @@ export default function Home() {
     {/* RIGHT: experience image */}
     <div className="flex justify-center">
       <div className="w-full max-w-xs space-y-3">
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-fuchsia-700/30 via-violet-700/30 to-sky-600/30 shadow-lg shadow-black/40">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-fuchsia-700/30 via-violet-700/30 to-sky-600/30 shadow-lg shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/40 hover:shadow-lg hover:shadow-fuchsia-500/20">
           <ZoomableImage
             src="/MunichRE.jpg"
             alt="Munich RE work experience image"
@@ -338,7 +397,7 @@ export default function Home() {
             className="h-32 w-full object-cover"
           />
         </div>
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-fuchsia-700/30 via-violet-700/30 to-sky-600/30 shadow-lg shadow-black/40">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-fuchsia-700/30 via-violet-700/30 to-sky-600/30 shadow-lg shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/40 hover:shadow-lg hover:shadow-fuchsia-500/20">
           <div className="space-y-2 p-2">
             <ZoomableImage
               src="/BMW.jpeg"
@@ -356,7 +415,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-fuchsia-700/30 via-violet-700/30 to-sky-600/30 shadow-lg shadow-black/40">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-fuchsia-700/30 via-violet-700/30 to-sky-600/30 shadow-lg shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/40 hover:shadow-lg hover:shadow-fuchsia-500/20">
           <ZoomableImage
             src="/ZEISS.jpeg"
             alt="ZEISS"
@@ -365,7 +424,7 @@ export default function Home() {
             className="h-32 w-full object-cover"
           />
         </div>
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-fuchsia-700/30 via-violet-700/30 to-sky-600/30 shadow-lg shadow-black/40">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-fuchsia-700/30 via-violet-700/30 to-sky-600/30 shadow-lg shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/40 hover:shadow-lg hover:shadow-fuchsia-500/20">
           <ZoomableImage
             src="/Max_planck.png"
             alt="Max Planck work experience image"
@@ -381,7 +440,7 @@ export default function Home() {
 
         <section
           id="certificates"
-          className="relative mt-14 overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-r from-fuchsia-900/40 via-violet-900/35 to-sky-900/35 p-6 shadow-xl shadow-black/50"
+          className="relative mt-14 overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-r from-fuchsia-900/40 via-violet-900/35 to-sky-900/35 p-6 shadow-xl shadow-black/50 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/40 hover:shadow-xl hover:shadow-fuchsia-500/15"
         >
           <div className="pointer-events-none absolute inset-0 opacity-35">
             <div className="absolute -top-14 -left-10 h-40 w-40 rounded-full bg-fuchsia-500/30 blur-3xl" />
@@ -397,7 +456,7 @@ export default function Home() {
               {certificates.map((c) => (
                 <article
                   key={`${c.name}-${c.year}`}
-                  className="rounded-3xl border border-white/20 bg-zinc-950/75 p-5 shadow-xl shadow-black/50"
+                  className="rounded-3xl border border-white/20 bg-zinc-950/75 p-5 shadow-xl shadow-black/50 transition duration-300 hover:-translate-y-0.5 hover:border-fuchsia-300/50 hover:shadow-xl hover:shadow-fuchsia-500/20"
                 >
                   <p className="text-sm font-semibold text-white">{c.name}</p>
                   <div className="mt-2 inline-flex rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-semibold text-zinc-100">
@@ -410,7 +469,7 @@ export default function Home() {
                       href={c.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-4 inline-flex items-center justify-center rounded-full border border-sky-300/40 bg-sky-500/20 px-3 py-1.5 text-xs font-semibold text-sky-100 hover:bg-sky-500/30"
+                      className="mt-4 inline-flex items-center justify-center rounded-full border border-sky-300/40 bg-sky-500/20 px-3 py-1.5 text-xs font-semibold text-sky-100 transition duration-300 hover:-translate-y-0.5 hover:bg-sky-500/30 hover:shadow-md hover:shadow-sky-500/25"
                     >
                       View certificate
                     </a>
@@ -428,7 +487,7 @@ export default function Home() {
           <div className="mt-4 flex flex-wrap gap-3">
             <a
               href="mailto:pavanln049@gmail.com"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-red-400/40 bg-red-500/20 px-4 py-2 text-sm font-semibold text-red-100 hover:bg-red-500/30"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-red-400/40 bg-red-500/20 px-4 py-2 text-sm font-semibold text-red-100 transition duration-300 hover:-translate-y-0.5 hover:border-red-300/60 hover:bg-red-500/30 hover:shadow-lg hover:shadow-red-500/25"
             >
               <span className="h-2 w-2 rounded-full bg-red-400" />
               Email
@@ -437,7 +496,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/kumar-pavan/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-sky-400/40 bg-sky-500/20 px-4 py-2 text-sm font-semibold text-sky-100 hover:bg-sky-500/30"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-sky-400/40 bg-sky-500/20 px-4 py-2 text-sm font-semibold text-sky-100 transition duration-300 hover:-translate-y-0.5 hover:border-sky-300/60 hover:bg-sky-500/30 hover:shadow-lg hover:shadow-sky-500/25"
             >
               <span className="h-2 w-2 rounded-full bg-sky-300" />
               LinkedIn
@@ -446,7 +505,7 @@ export default function Home() {
               href="https://github.com/Pavan-AIML"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-700 bg-zinc-900 px-4 py-2 text-sm font-semibold text-zinc-100 hover:bg-black"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-700 bg-zinc-900 px-4 py-2 text-sm font-semibold text-zinc-100 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-500 hover:bg-black hover:shadow-lg hover:shadow-violet-500/20"
             >
               <span className="h-2 w-2 rounded-full bg-black ring-1 ring-zinc-500" />
               GitHub
