@@ -68,23 +68,36 @@ export default function Home() {
     <div className="absolute -top-20 -left-10 h-56 w-56 rounded-full bg-fuchsia-500 blur-3xl" />
     <div className="absolute -bottom-24 right-0 h-64 w-64 rounded-full bg-sky-400 blur-3xl" />
   </div>
-          {/* LEFT: hero text — pushed right toward image, justified like Word */}
+          {/* LEFT: hero text */}
           <div className="flex w-full flex-col space-y-4 pr-8 md:ml-auto md:mr-0 md:pr-12">
-            <p className="text-xs font-semibold tracking-wide text-white/60">
-              Welcome to My Portofolio :) 
+            <p className="inline-flex w-fit items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/80">
+              AI Engineer | Munich
             </p>
-            <h1 className="text-left text-lg font-semibold leading-snug tracking-tight md:text-3xl">
-              Hi, I am Pavan an AI/ML Engineer. I have studied Master&apos;s in Data Science & Applied Mathematics from TUM. Currently, I am building AI agents from planning to production.
+            <h1 className="text-left text-2xl font-bold leading-tight tracking-tight md:text-4xl">
+              Hi, I&apos;m <span className="bg-gradient-to-r from-fuchsia-300 via-violet-200 to-sky-300 bg-clip-text text-transparent">Pavan Kumar</span>
             </h1>
-            <p className="text-base leading-7 text-zinc-100/90 text-justify">
-              Please intract to my voice agent that can answer questions about my work behalf of me.
-              Explore the below projects. Each card links to my GitHub page.
-              Any questions please reachout to me via my contact details given below.
+            <p className="max-w-2xl text-base font-medium leading-7 text-zinc-100/95 md:text-lg">
+              I build production-ready AI applications from model development to deployment.
             </p>
+            <p className="max-w-2xl text-sm leading-7 text-zinc-200/90 md:text-base">
+              I am studying Master&apos;s in Data Science and Applied Mathematics at TUM. Explore my work experience and projects below, or use the live voice assistant to ask about my background in LLMs, AI agents, data science and MLOps
+            </p>
+            <div className="flex flex-wrap gap-2.5 text-[11px] font-semibold">
+              <span className="rounded-full border border-fuchsia-300/35 bg-fuchsia-500/15 px-3 py-1 text-fuchsia-100">Agentic AI</span>
+              <span className="rounded-full border border-sky-300/35 bg-sky-500/15 px-3 py-1 text-sky-100">MLOps</span>
+              <span className="rounded-full border border-violet-300/35 bg-violet-500/15 px-3 py-1 text-violet-100">Cloud Data Pipelines</span>
+              <span className="rounded-full border border-emerald-300/35 bg-emerald-500/15 px-3 py-1 text-emerald-100">Production Applications</span>
+            </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="#projects"
+                href="#workexperience"
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-600 via-violet-600 to-sky-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/20 transition duration-300 hover:-translate-y-0.5 hover:opacity-95 hover:shadow-lg hover:shadow-fuchsia-500/30"
+              >
+                View experience
+              </a>
+              <a
+                href="#projects"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-zinc-900/70 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/35 hover:bg-zinc-800/80 hover:shadow-lg hover:shadow-violet-500/15"
               >
                 View projects
               </a>
