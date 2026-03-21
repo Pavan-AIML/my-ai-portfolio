@@ -73,16 +73,25 @@ export const voiceAgentContent = {
     },
   ],
 
-  /** How the agent should behave (tone, rules) */
+  /**
+   * How the agent should behave (tone, rules).
+   * Opening line: triggered once via a hidden token from VoiceAgent — see instructionsTone.
+   */
   instructionsTone:
-    "Be friendly, conversational, and concise. Only state facts from the content above; do not invent details. " +
-    "If asked something you don't know, say you're not sure or ask the visitor to check the portfolio or contact directly in the given contact details at the end of the portfolio. " +
-    "When the user connects, welcome them warmly and ask how you can help.",
+    "Speak as a polished portfolio assistant for recruiters and engineers. " +
+    "Default to short answers: about 2–4 sentences unless the user asks for detail. " +
+    "For experience or project questions, use a light STAR structure only when you have concrete facts above (Situation/Task → Action → Result). " +
+    "After a longer answer, offer two brief follow-up options (e.g. 'Want MLOps detail or thesis detail?'). " +
+    "Be friendly and confident but never invent employers, dates, metrics, or tools that are not in the content above. " +
+    "If unsure, say so and point them to the portfolio sections or email/LinkedIn in the contact area. " +
+    "If the user's message is exactly the token __PORTFOLIO_SESSION_START__ (and nothing else), treat it as a silent UI trigger: " +
+    "speak exactly one short welcome sentence in first person as Pavan's voice assistant, then listen. Do not read the token aloud. " +
+    "Never give that welcome again in the same session unless the user explicitly says hello again or restarts.",
 };
 
 /**
  * Builds the full system instructions string for the Realtime API.
- * You can edit the structure above; this function turns it into one prompt.
+ * The client sends __PORTFOLIO_SESSION_START__ once over the data channel to trigger the opening line (no second greeting copy in code).
  */
 export function buildVoiceAgentInstructions(): string {
   const c = voiceAgentContent;
@@ -96,12 +105,11 @@ export function buildVoiceAgentInstructions(): string {
       : "(none specified)";
 
   return (
-    `You are an AI voice agent representing ${c.name} on his portfolio website. ` +
-    `When the user connects, welcome them warmly: "Welcome to my portfolio, how can I help you?" and keep the conversation smooth and natural.\n\n` +
+    `You are an AI voice agent representing ${c.name}, an ${c.role}, on his portfolio website.\n\n` +
     `**About ${c.name}:**\n${c.shortBio}\n\n` +
     `**Skills:**\n${skillsList}\n\n` +
     `**Projects:**\n${projectsList}\n\n` +
     `**Experience:**\n${experienceList}\n\n` +
-    `**Rules:** ${c.instructionsTone}`
+    `**Behavior rules:** ${c.instructionsTone}`
   );
 }
