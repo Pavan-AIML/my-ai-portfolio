@@ -229,12 +229,10 @@ export default function Home() {
           </div>
           <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-100/90 md:text-[15px]">
           <li>
-            Built an end-to-end Python automation pipeline to handle FSRI data mapping, optimized workflows
-            and eliminated repetitive manual tasks for MGAs using Python, Pandas, and SQL.
+          Architected a multi-step agentic workflow in Microsoft Power Automate with LLM tool-calling to autonomously execute credit control checks and route decisions to the responsible stakeholders, replacing a fully manual end-to-end process.
           </li>
           <li>
-            Designed and ran SQL queries in SSMS for MGA data analysis and built BI dashboards to support
-            reporting and decision‑making.
+          Queried MGA data in SSMS to support ad hoc analysis, feeding insights into Power BI dashboards used by leadership.
           </li>
       </ul>
       
