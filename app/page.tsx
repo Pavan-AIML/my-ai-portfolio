@@ -298,7 +298,7 @@ export default function Home() {
           </div>
           <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-100/90 md:text-[15px]">
           <li>
-          Built a multi-degree polynomial regression model from scratch
+          Built a multi-degree polynomial regression model from scratch to interpolate the 3D printer dataset.
           </li>
           <li>
           Trained different AI model architectures using tool Optuna for fine-tuning
