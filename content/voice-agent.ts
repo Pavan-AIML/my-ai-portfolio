@@ -36,12 +36,12 @@ export const voiceAgentContent = {
         "Developed a multi-agent hybrid RAG pipeline with LLMs and ChromaDB to automate high-accuracy retrieval and question answering from enterprise documents.",
       tags: ["LLMs", "RAG", "LangChain", "LangGraph", "ChromaDB", "Python"],
     },
-    {
-      name: "Railway Workflow Automation",
-      oneLiner:
-        "Built a multi-agent workflow for technical document operations and integrated CI/CD with Docker and GitLab for reliable deployment.",
-      tags: ["AI Agents", "MLOps", "Docker", "GitLab CI/CD"],
-    },
+    // {
+    //   name: "Railway Workflow Automation",
+    //   oneLiner:
+    //     "Built a multi-agent workflow for technical document operations and integrated CI/CD with Docker and GitLab for reliable deployment.",
+    //   tags: ["AI Agents", "MLOps", "Docker", "GitLab CI/CD"],
+    // },
   ],
 
   /** Optional: experience / roles the agent can mention */
@@ -49,22 +49,26 @@ export const voiceAgentContent = {
     {
       role: "AI Engineer, Process Automation",
       org: "Munich RE",
-      duration: "2025-present",
+      duration: "2025-February 2026",
+      description: "Architected a multi-step agentic workflow in Microsoft Power Automate with LLM tool-calling to autonomously execute credit control checks and route decisions to the responsible stakeholders, replacing a fully manual end-to-end process. Queried MGA data in SSMS to support ad hoc analysis, feeding insights into Power BI dashboards used by leadership.",
     },
     {
       role: "AI Engineer, ML Ops",
       org: "MERMEC",
       duration: "2025",
+      description: "1 - Built a multi-agent system with LangGraph and hybrid RAG on internal technical documentation, so engineers could get answers from docs instead of digging through PDFs for railway-related queries. 2- Containerized the app with Docker, ran it on Kubernetes on AWS and used GitLab CI/CD to ship the application to production.",
     },
     {
       role: "Data Engineer",
       org: "BMW",
       duration: "2024",
+      description: "Built ETL pipeline for data ingestion and transformation in Azure Databricks. Used SSMS to query data from Azure SQL Database & visualize using Power BI.",
     },
     {
       role: "Data Scientist",
       org: "ZEISS and Max Planck",
       duration: "2023-2024",
+      description: "At ZEISS Implemented multi-degree polynomial regression from scratch in PyTorch to interpolate 3D printer data. Tuned model architectures with the tool Optuna and deployed the final model to production in the Azure cloud. At Max Planck Institute for extraterrestrial PhysicsBuilt a data-analysis pipeline for spectral image dataset. Trained a CNN to correctly identify the incorrect predictions by pipeline .",
     },
     {
       role: "Data Analyst",
@@ -78,7 +82,7 @@ export const voiceAgentContent = {
    * Opening line: triggered once via a hidden token from VoiceAgent — see instructionsTone.
    */
   instructionsTone:
-    "Speak as a polished portfolio assistant for recruiters and engineers. " +
+    "Speak as a polished, polite and professional portfolio assistant for recruiters and engineers. " +
     "Default to short answers: about 2–4 sentences unless the user asks for detail. " +
     "For experience or project questions, use a light STAR structure only when you have concrete facts above (Situation/Task → Action → Result). " +
     "After a longer answer, offer two brief follow-up options (e.g. 'Want MLOps detail or thesis detail?'). " +
