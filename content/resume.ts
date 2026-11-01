@@ -15,7 +15,7 @@ export const profile = {
   summary:
     "AI Engineer with 4+ years of engineering experience, including 2 years shipping GenAI features end-to-end - from prompt engineering and RAG pipeline design through to cloud deployment on AWS/Azure. I build LLM-powered products that cut manual work and lift accuracy, and I'm comfortable owning the full ML life cycle in fast-moving teams.",
   headline:
-    "I ship AI from prototype to production: full-stack apps, agentic workflows and MLOps around them.",
+    "I ship AI applications from prototype to production: full-stack apps, agentic workflows and MLOps around them.",
 };
 
 export const metrics = [

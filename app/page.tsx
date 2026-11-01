@@ -48,7 +48,7 @@ export default function Home() {
 
       {/* Top nav */}
       <header className="sticky top-0 z-30 border-b border-white/5 bg-slate-900/80 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-6 py-4 lg:px-10">
           <a href="#top" className="flex items-center gap-2 text-sm font-semibold tracking-tight">
             <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-sky-400 to-indigo-500 text-[11px] font-bold text-slate-950">
               PK
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main id="top" className="mx-auto w-full max-w-6xl px-6 pb-28">
+      <main id="top" className="mx-auto w-full max-w-screen-2xl px-6 pb-28 lg:px-10">
         <VoiceAgent autoOpen={false} autoWelcome />
 
         {/* ================= HERO ================= */}
@@ -90,13 +90,13 @@ export default function Home() {
               Available for roles · {profile.location}
             </div>
 
-            <h1 className="text-4xl font-semibold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl">
+            <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl">
               {profile.name}.
             </h1>
-            <p className="text-xl font-medium leading-tight text-slate-200 md:text-2xl">
+            <p className="text-2xl font-medium leading-snug text-slate-200 md:text-3xl">
               {profile.title}. {profile.headline}
             </p>
-            <p className="max-w-xl text-[15px] leading-7 text-slate-400">
+            <p className="max-w-xl text-base leading-7 text-slate-400 md:text-lg md:leading-8">
               {profile.summary}
             </p>
 
@@ -145,10 +145,10 @@ export default function Home() {
         <section className="mt-14 grid grid-cols-2 gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur md:grid-cols-4 md:gap-6 md:p-6">
           {metrics.map((m) => (
             <div key={m.label} className="flex flex-col items-start gap-1 px-2">
-              <span className="bg-gradient-to-r from-sky-300 to-indigo-300 bg-clip-text text-3xl font-semibold tracking-tight text-transparent md:text-4xl">
+              <span className="bg-gradient-to-r from-sky-300 to-indigo-300 bg-clip-text text-4xl font-semibold tracking-tight text-transparent md:text-5xl">
                 {m.value}
               </span>
-              <span className="text-xs font-medium text-slate-400 md:text-sm">{m.label}</span>
+              <span className="text-sm font-medium text-slate-400 md:text-base">{m.label}</span>
             </div>
           ))}
         </section>
@@ -158,7 +158,7 @@ export default function Home() {
           <div className="mb-6 flex items-end justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">Stack</p>
-              <h2 className="mt-1 text-2xl font-semibold tracking-tight text-white md:text-3xl">Skills & tooling</h2>
+              <h2 className="mt-1 text-3xl font-semibold tracking-tight text-white md:text-4xl">Skills & tooling</h2>
             </div>
           </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -187,7 +187,7 @@ export default function Home() {
         <section id="experience" className="mt-20">
           <div className="mb-6">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">Career</p>
-            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-white md:text-3xl">Experience</h2>
+            <h2 className="mt-1 text-3xl font-semibold tracking-tight text-white md:text-4xl">Experience</h2>
             <p className="mt-2 max-w-2xl text-sm text-slate-400">
               From DevOps and full-stack platforms to agentic AI and MLOps. A timeline of what I&apos;ve shipped.
             </p>
@@ -208,7 +208,7 @@ export default function Home() {
                         <p className="text-xs font-medium tracking-wide text-slate-400">
                           {e.start} to {e.end} · {e.location}
                         </p>
-                        <h3 className="mt-1 text-base font-semibold text-white md:text-lg">
+                        <h3 className="mt-1 text-lg font-semibold text-white md:text-xl">
                           {e.role} <span className="text-slate-400">·</span>{" "}
                           <span className="text-slate-200">{e.org}</span>
                         </h3>
@@ -227,7 +227,7 @@ export default function Home() {
                         </span>
                       ))}
                     </div>
-                    <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-300">
+                    <ul className="mt-3 list-disc space-y-2 pl-5 text-[15px] leading-7 text-slate-300">
                       {e.bullets.map((b, i) => (
                         <li key={i}>{b}</li>
                       ))}
@@ -261,7 +261,7 @@ export default function Home() {
         <section id="projects" className="mt-20">
           <div className="mb-6">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">Selected work</p>
-            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-white md:text-3xl">Projects</h2>
+            <h2 className="mt-1 text-3xl font-semibold tracking-tight text-white md:text-4xl">Projects</h2>
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-2">
             {projects.map((p) => (
@@ -280,8 +280,8 @@ export default function Home() {
                     />
                   </div>
                 ) : null}
-                <h3 className="text-base font-semibold text-white">{p.name}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-400">{p.description}</p>
+                <h3 className="text-lg font-semibold text-white">{p.name}</h3>
+                <p className="mt-2 text-[15px] leading-7 text-slate-400">{p.description}</p>
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {p.tags.map((t) => (
                     <span
@@ -323,7 +323,7 @@ export default function Home() {
         <section id="education" className="mt-20">
           <div className="mb-6">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">Academics</p>
-            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-white md:text-3xl">Education</h2>
+            <h2 className="mt-1 text-3xl font-semibold tracking-tight text-white md:text-4xl">Education</h2>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {education.map((ed) => (
@@ -378,7 +378,7 @@ export default function Home() {
         <section id="certificates" className="mt-20">
           <div className="mb-6">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">Credentials</p>
-            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-white md:text-3xl">Certificates</h2>
+            <h2 className="mt-1 text-3xl font-semibold tracking-tight text-white md:text-4xl">Certificates</h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {certificates.map((c) => (
